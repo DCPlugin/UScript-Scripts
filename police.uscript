@@ -1,0 +1,11 @@
+command police(){
+    permission = array("call.police"); 
+    execute(){
+    sms = arguments.join(" "); 
+        foreach(loopPlayer in server.players){
+           if(loopPlayer.hasPermission("call.police")){
+                loopPlayer.message("Chat name or whatever " + toString(sms));
+            }
+        }
+    }
+}
